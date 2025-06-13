@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INMOBILIARIA ML SAS</title>
+   
+   <style>
+     table {
+        width: 90%;
+        border-collapse: collapse;
+     }
+
+     th, td {
+        border: 1px solid #aaa;
+        padding: 8px;
+       text-align: left;
+     }
+
+     th {
+       background-color: #f2f2f2;
+     }
+
+     tr:hover {
+       background-color: #e6f7ff;
+     }
+   </style>
+
+
+</head>
+
+<body></h1>
+
+<table>
+   <thead>
+    <tr>
+      <th width="5" style="text-align: center;" height="80"><img width=100 height=80
+  src="GrupoMolanoLopez.jpg" align="center"> </th>
+      <th width="50" style="text-align: center;" height="80">INVENTARIO</th>
+    </tr>
+   </thead>
+   <tbody>
+      <tr> </tr>
+   </tbody>
+</table>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th width="5" style="text-align: center;" height="12">FECHA</th>
+      <th width="55" style="text-align: center;" height="12">DIRECCION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td height="12"> </td>
+      <td height="12"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th width="8" style="text-align: center;" height="12">NOMBRE ARRENDADOR</th>
+      <th width="52" style="text-align: center;" height="12">CEDULA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td height="12"> </td>
+      <td height="12"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th width="8" style="text-align: center;" height="12">NOMBRE ARRENDATARIO</th>
+      <th width="52" style="text-align: center;" height="12">CEDULA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td height="12"> </td>
+      <td height="12"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<form id="inventario" action:"mailto:jmolano_barrios@hotmail.com" method="POST" enctype="text/plain">
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th rowspan="2" style="text-align: center;" width="50%">DESCRIPCION   </th>
+      <th rowspan="2" style="text-align: center;" width="8%">CANT.</th>
+      <th colspan="3" style="text-align: center;" width="10%">ENTREGA</th>
+      <th colspan="3" style="text-align: center;" width="10%">RECIBO</th>
+      <th rowspan="2" style="text-align: center;" width="40%">OBSERVACION</th>
+    </tr>
+    <tr>
+      <th>B</th>
+      <th>R</th>
+      <th>M</th>
+      <th>B</th>
+      <th>R</th>
+      <th>M</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="9" width="100%" >AREA</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+ <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+  <textarea id="contenido" rows="10" cols="50" placeholder="Escribe tu texto aquí..."></textarea>
+
+  <button onclick="descargarTXT()">Enviar archivo TXT</button>>
+</form>
+   <script>
+    function descargarTXT() {
+      const texto = document.getElementById('contenido').value;
+      const blob = new Blob([texto], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'mi_archivo.txt'; // Nombre del archivo
+      a.click();
+
+      URL.revokeObjectURL(url); // Limpia la memoria
+    }
+  </script>
+</body>
+
+</html>
